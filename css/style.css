@@ -1,0 +1,25 @@
+body {
+    background-size: cover;
+    background-color:rgb(179, 159, 146);
+    font-family:'Cochin', serif;
+}
+
+#Title {
+    font-size: 30px;
+    text-align:center;
+    background-color: bisque;
+
+
+}
+#Tavern_Box {
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+    background-color: bisque;
+    text-align: center;
+}
+
+.button {
+    background-color: rgb(200, 143, 210);
+
+}
