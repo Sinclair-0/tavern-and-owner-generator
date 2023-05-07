@@ -1,25 +1,40 @@
 body {
     background-size: cover;
-    background-color:rgb(179, 159, 146);
+    background-color:rgb(148, 153, 161);
     font-family:'Cochin', serif;
 }
 
 #Title {
-    font-size: 30px;
+    font-size: 40px;
     text-align:center;
-    background-color: bisque;
 
 
 }
-#Tavern_Box {
+.Base {
     margin: auto;
+    border: 7px solid;
+    border-color: rgb(43, 39, 49);
     width: 75%;
     padding: 10px;
-    background-color: bisque;
+    background-color: rgb(96, 104, 116);
     text-align: center;
 }
-
+#Tavern_Name {
+    font-size: 35px;   
+}
 .button {
-    background-color: rgb(200, 143, 210);
+    background-color: rgb(96, 104, 116);
+    border: 3px solid;
+    border-color:rgb(43, 39, 49);
+    font-size: 24px;
+    margin: auto;
+    padding: 15px 32px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+
+}
+.button:hover {
+    background-color: rgb(43, 39, 49);
+
 
 }

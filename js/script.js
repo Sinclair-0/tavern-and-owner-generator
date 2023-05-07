@@ -2,14 +2,6 @@ var nouns = ["Hero", "Mystic", "Mage", "Miner", "Farmer", "Poet", "Courier", "Co
 var container = document.getElementById("Tavern_Name");
 var randomnumber1;
 var randomnumber2;
-var name;
-function generateName()
-{
-    var bodyHeight = ["short", "tall", "an average height"];
-    var bodyType = ["portly", "lean", "bulky", "scrawny", "an average weight"];
-    var personality = ["calm", "seductive", "loud", "quiet", "meek", "angry", "rude", "solemn", "dorky", "bossy", "smug", "stubborn", "serious", "jokey", "cheery", "kind", "bored", "apathetic", "lively", "snobby", "humble", "friendly"];
-    var quirks = [" speaks with a slight stutter.", " has an embarrassing tattoo.", " only wears glass jewelry.", " doesn't understand sarcasm.", " is sarcastic.", " is sober.", " has a slight limp.", " always has a torn left sleeve.", " loves gossip.", " is a werewolf.", " has an uncanny memory.", " was an orphan.", " has a kid", " knows a noble, personally.", " is superstitious", " frequently cleans their glasses", " has an evil (sounding) laugh.", " uses slang, incorrectly.", " hums frequently.", " holds grudges.", " has a weakness for sweets.", " dislikes sweets.", " collects rocks.", " collects trinkets.", " is an avid reader.", " dislikes reading.", " has vocal fry.", " quotes things frequently, often incorrectly.", " laughs at their own jokes.", " has a fear of spiders.", " has a fear of cats.", " has a fear of dogs.", " is afraid of the dark.", " has a monotone voice.", " dislikes eating in front of others.", " believes in a wild conspiracy theory.", " will not eat food they didn't make.", " will not drink something they didn't pour.", " loves riddles.", " speaks in rhyme.", " loves puns.", " doesn't understand puns.", " talks with their hands.", " is a minimalist.", " is a maximalist.", " always misprounouces a certain word.", " doesn't curse.", " loves spicy foods.", " loves card tricks.", " loves doing card tricks.", " is a gambler.", " does not like gambling.", " whistles to themselves", " has a terrible sense of direction.", " pretends to be stupid.", " pretends to be smart.", " loves stormy weather.", " is afraid of thunder.", " mutters small onomatopoeia noises to themselves while working.", " is vain.", " frequently checking/fixing appearance.", " eavesdrops.", " smells pleasant.", " has a soft laugh.", " has a loud laugh.", " has aphantasia.", ];
-}
 function generateRichName()
 {
     var name;
@@ -40,16 +32,44 @@ function generatePoorName()
 function surprise()
 {
     var number = Math.floor(Math.random() * 3);
-    if(number = 1)
+    if(number = 0)
+    {
+        container.innerHTML = 5+5;
         generateRichName();
-    if(number = 2)
+    }
+    if(number = 1)
+    {
+        container.innerHTML = 7-5;
         generateMidName();
-    if(number = 3)
+    }
+    if(number = 2)
+    {
+        container.innerHTML = 3+5;
         generatePoorName();
+    }
     
 }
+function owner() {
+    var owner;
+    var bodyHeight = ["short", "tall", "an average height"];
+    var bodyType = ["portly", "lean", "bulky", "scrawny", "an average weight"];
+    var personality = ["calm", "seductive", "loud", "quiet", "meek", "angry", "rude", "solemn", "dorky", "bossy", "smug", "stubborn", "serious", "jokey", "cheery", "kind", "bored", "apathetic", "lively", "snobby", "humble", "friendly"];
+    var quirks = [" speaks with a slight stutter.", " has an embarrassing tattoo.", " only wears glass jewelry.", " doesn't understand sarcasm.", " is sarcastic.", " is sober.", " has a slight limp.", " always has a torn left sleeve.", " loves gossip.", " a werewolf.", " has an uncanny memory.", " was an orphan.", " has a kid", " knows a noble, personally.", " is superstitious", " frequently cleans their glasses", " has an evil (sounding) laugh.", " uses slang, incorrectly.", " hums frequently.", " holds grudges.", " has a weakness for sweets.", " dislikes sweets.", " collect rocks.", " collect trinkets.", " is an avid reader.", " dislikes reading.", " has vocal fry.", " quotes things incorrectly.", " laughs at their own jokes.", " have a fear of spiders.", " have a fear of cats.", " have a fear of dogs.", " is afraid of the dark.", " has a monotone voice.", " dislikes eating in front of others.", " believes in a wild conspiracy theory.", " will not eat food they didn't make.", " will not drink something they didn't pour.", " loves riddles.", " speaks in rhyme.", " loves puns.", " doesn't understand puns.", " talks with their hands.", " is a minimalist.", " is a maximalist.", " always misprounouces a certain word.", " doesn't curse.", " loves spicy foods.", " loves card tricks.", " loves doing card tricks.", " is a gambler.", " does not like gambling.", " whistles to themselves", " has a terrible sense of direction.", " pretends to be stupid.", " pretends to be smart.", " loves stormy weather.", " is afraid of thunder.", " mutters small onomatopoeia noises to themselves while working.", " is vain.", " frequently checking/fixing their appearance.", " eavesdrops.", " smells pleasant.", " has a soft laugh.", " has a loud laugh.", " has aphantasia.", ];
+    var randomnumber3;
+    var randomnumber4;
+    randomnumber1 = Math.floor(Math.random() * (bodyHeight.length));
+    randomnumber2 = Math.floor(Math.random() * (bodyType.length));
+    randomnumber3 = Math.floor(Math.random() * (personality.length));
+    randomnumber4 = Math.floor(Math.random() * (quirks.length));
 
+    owner = 'The owner is ' + bodyHeight[randomnumber1] + ' and ' + bodyType[randomnumber2] + '. They are ' + personality[randomnumber3] + ' and ' + quirks[randomnumber4];
+    document.getElementById("Owner_Name").innerHTML = owner;
+
+
+
+}
 document.getElementById("Rich").addEventListener("click", generateRichName, false);
 document.getElementById("Middle").addEventListener("click", generateMidName, false);
 document.getElementById("Poor").addEventListener("click", generatePoorName, false);
 document.getElementById("Surprise").addEventListener("click", surprise, false);
+document.getElementById("Owner").addEventListener("click", owner, false);
