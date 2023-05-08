@@ -1,40 +1,128 @@
 body {
     background-size: cover;
     background-color:rgb(148, 153, 161);
-    font-family:'Cochin', serif;
+    font-family: 'Courier New', Courier, monospace;
 }
+#title_Container {
+    margin: auto;
+    width: 95%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 50px;
+    border: 7px double;
+}
+#tavern_Div {
+    padding: 10px;
+    float: left;
+    margin-left: 3%;
+    width: 45%;
+    height:225px;
+    border: 3px double;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
 
-#Title {
+
+}
+#owner_Div {
+    padding: 10px;
+    float: right;
+    margin-right: 3%;
+    width: 45%;
+    height:225px;
+    border: 3px double;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+
+
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sign {
+    width: 100%;
+    height: 100%;
+}
+#tavern_Title {
+    position: relative;
     font-size: 40px;
+    font-weight: bolder;
+    line-height: 1.6;
+    padding: 10px;
+    float: left;
+    margin-left: 11%;
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    margin-bottom: 5px;
+
+
+}
+#owner_Title {
+    position: relative;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 1.6;
+    padding: 10px;
+    float: right;
+    margin-right: 11%;
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#Title {
+    font-size: 50px;
     text-align:center;
-
-
+}
+.output_Text {
+    font-size: 28px;
 }
 .Base {
     margin: auto;
-    border: 7px solid;
+    margin-bottom: 10%;
+    border: 5px double;
     border-color: rgb(43, 39, 49);
-    width: 75%;
+    width: 85%;
+    height: 275px;
     padding: 10px;
     background-color: rgb(96, 104, 116);
     text-align: center;
+    position: relative;
+    font-size: 35px;
+    line-height: 1.6; 
 }
-#Tavern_Name {
-    font-size: 35px;   
+
+  .heading {
+    font-size: 45px;
+    margin-bottom: 1%;
+
+  }
+
+.Name {
+    font-size: 35px; 
+    font-style: italic;
+}
+.Text {
+    font-family: 'Courier New', Courier, monospace;
 }
 .button {
     background-color: rgb(96, 104, 116);
-    border: 3px solid;
     border-color:rgb(43, 39, 49);
+    border: 3px solid;
     font-size: 24px;
-    margin: auto;
-    padding: 15px 32px;
+    margin:5px;
+    padding: 12px 24px;
     border-radius: 5px;
     transition-duration: 0.4s;
 
 }
 .button:hover {
     background-color: rgb(43, 39, 49);
-
-
 }
